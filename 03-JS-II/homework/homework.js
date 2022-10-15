@@ -62,7 +62,10 @@ function colors(color) {
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
   switch(color){
-    case "blue", "red", "green", "orange": return "This is " + color;
+    case "blue": return "This is blue"; break; 
+    case "red": return "This is red"; break;
+    case "green": return "This is green"; break;
+    case "orange": return "This is orange"; break;
     default: return "Color not found";
   }
 }
@@ -182,7 +185,7 @@ function tablaDelSeis(){
   //Escribe tu código aquí   
   var lista = [];
 
-  for(var i = 0; i <= 60; i++){
+  for(var i = 0; i <= 10; i++){
     lista[i] = i * 6;
   }
 
@@ -192,7 +195,7 @@ function tablaDelSeis(){
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  if(numero > 99){
+  if(numero > 99 && numero <= 999){
     return true;
   }else{
     return false;
@@ -203,7 +206,7 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  var contador = 1;
+  var contador = 0;
   var resultado = numero;
 
   do{
