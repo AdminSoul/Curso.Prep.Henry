@@ -62,8 +62,10 @@ function dePalabrasAFrase(palabras) {
   // Tu código:
   var cadena;
 
-  for(var i = 0; i < palabras.length; i++){
-    cadena += palabras[i];
+  cadena = palabras[0];
+
+  for(var i = 1; i < palabras.length; i++){
+    cadena += " " + palabras[i];
   }
 
   return cadena;
@@ -90,7 +92,7 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
 
-  var resultado;
+  var resultado = 0;
 
   for(var i = 0; i < numeros.length; i++){
     resultado += numeros[i];
@@ -104,13 +106,13 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  var resultado;
+  var resultado = 0;
 
   for(var i = 0; i < resultadosTest.length; i++){
     resultado += resultadosTest[i];
   }
 
-  return resultado / resultado.length;
+  return resultado / resultadosTest.length;
 }
 
 
@@ -182,7 +184,7 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  if(n.slice(0, 1) === "9"){
+  if(n.substring(0, 1) === "9"){
     return true;
   }else{
     return false;
@@ -277,9 +279,8 @@ function continueStatement(numero) {
   var suma = numero;
 
   for(var i = 0; i < 10; i++){
-    suma += 2;
-
     if(i !== 5){
+      suma += 2;
       nuevoarray.push(suma);
     }
   }
