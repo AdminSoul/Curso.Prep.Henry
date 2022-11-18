@@ -32,8 +32,7 @@ function invocarMetodo(objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  objeto[metodo];
-  return objeto;
+  return objeto(metodo);
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
@@ -64,11 +63,15 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if (usuario[email] === undefined){
-    return false;
-  }else{
+if (usuario.hasOwnProperty("email")){
+  if(usuario.email !== null){
     return true;
+  }else{
+    return false;
   }
+}else{
+  return false;
+}
 }
 
 
